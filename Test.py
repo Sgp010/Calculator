@@ -1,15 +1,7 @@
 import streamlit as st
 import requests
-from streamlit_lottie import st_lottie
+
 st.set_page_config(page_title="Calculator", page_icon="🔢", layout="wide")
-def lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-
-lottie1 = lottieurl("https://lottie.host/432ac01e-f8e4-4b29-81cd-15cca6649f10/ZTIMWm4UAR.json")
 with st.container():
     st.header("CALCULATOR")
 with st.container():
@@ -34,6 +26,4 @@ with st.container():
                 st.write(a,"to the power", b)
                 st.write(int(a)**int(b))
 
-        with right_column:
-            st_lottie(lottie1, height = 300, key = "code")
 
