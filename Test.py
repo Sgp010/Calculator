@@ -15,15 +15,15 @@ with st.container():
             li = ["Addition", "Subtraction", "Multiplication", "Division", "Exponent"]
             sl = st.selectbox("---Choose an operator---", li)
             if sl == "Addition":
-                st.write(int(a)+int(b))
+                st.write(a+b)
             elif sl == "Subtraction":
-                st.write(int(a)-int(b))
+                st.write(a-b)
             elif sl == "Multiplication":
-                st.write(int(a)*int(b))
+                st.write(a*b)
             elif sl == "Division":
-                st.write(int(a)/int(b))
+                st.write(a/b)
             elif sl == "Exponent":
                 st.write(a,"to the power", b)
-                st.write(int(a)**int(b))
+                st.write(a**b)
 
 
